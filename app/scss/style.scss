@@ -70,7 +70,94 @@
     }
 }
 
+.footer-top{
+    padding: 74px 0 76px;
+    border-bottom: 1px solid #dae4e9;
+    display: flex;   
+    &__contact{
+        width: 190px;
+        margin-right: 110px;
+    }
+    &__nav{
+        width: 170px;
+        margin-right: 100px;
+        line-height: 21px;
+    }
+    &__item-form{
+        width: 300px;
+        color: #7b7b7b;
+    }
+    &__logo{
+        margin-bottom: 26px;
+        display: block;
+    }
+    &__adress{
+        line-height: 24px;
+        font-size: 14px;
+    }
+    &__phone,
+    &__email{
+        line-height: 32px;
+        font-size: 14px;
+    }
+    &__title{
+        margin-bottom: 26px;
+        font-size: 16px;
+        padding-top: 18px;
+        line-height: 21px;
+        @extend %DMSans-Bold;
+        color: #1f2044;
+        text-transform: uppercase;
+    }
+    &__text{
+        margin-bottom: 36px;
+    }
+    &__link{
+        padding-bottom: 8px;
+        display: block;
+    }
+    &__form-input{
+        max-width: 190px;
+        width: 100%;
+        background-color: #fef7f0;
+        border: none;
+        padding: 15px 10px 15px 17px;
+        &::placeholder{
+            color: #234969;
+            font-size: 12px;
+            @extend %DMSans-Regular;
+        }
+    }
+    &__form-btn{
+        border: none;
+        background-color: #a3bbc8;
+        color: white;
+        font-size: 14px;
+        line-height: 20.5px;
+        padding: 15px 18px 13px;
+        @extend %DMSans-Regular;
+        cursor: pointer;
+    }
+}
 
+.footer-bottom{
+    font-size: 14px;
+    color: #7b7b7b;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list{
+        display: flex;
+    }
+    &__link + &__link{
+        padding: 0 18px;
+        border-left: 1px solid #7b7b7b;
+    }
+    &__link-h{
+        padding-right: 18px;
+    }
+}
 
 
 
