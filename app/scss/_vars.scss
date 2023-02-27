@@ -32,3 +32,10 @@ $additional:#436372;
     font-family: 'DMSans-Regular', sans-serif;
     font-weight: 400;
 }
+
+%btn{
+    background-color: #a3bbc8;
+    color: #ffff;
+    @extend %Rubik-Medium;
+    padding: 20px 25px;
+}

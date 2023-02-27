@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'global';
+@import 'libs';
 @import 'reset';
 
 .header{
@@ -158,6 +159,80 @@
         padding-right: 18px;
     }
 }
+
+.top-slider{
+    
+    &__inner{
+        background-color: #fcd7b6; 
+        padding-top: 90px; 
+    }
+    &__content{
+        padding-top: 100px;
+        padding-left: 160px;
+    }
+    &__title{
+        max-width: 570px;
+        font-size: 72px;
+        line-height: 70px;
+        @extend %Rubik-Medium;
+        color: $first;
+        margin-bottom: 38px;
+    }
+    &__text{
+        max-width: 370px;
+        margin-bottom: 40px;
+        color: $default;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &__btn{
+        @extend %btn;
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+    }
+    &__link{
+        font-size: 15px;
+        line-height: 12px;
+        color: #ffff
+    }
+    &__item{
+        display: flex !important;
+        justify-content: space-between;
+    }
+    &__img{
+        padding-right: 120px;
+        width: 780px;
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        li{
+            button{
+                padding: 0;
+                font-size: 11px;
+                line-height: 9px;
+                background-color: #fde3cc;
+                border: none;
+                @extend %Rubik-Medium;
+                color: $first;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-bottom: 45px;
+            } 
+        }
+        li + li{
+            padding-left: 10px;
+        }
+        .slick-active{
+            button{
+                background-color: #ffff;
+            }
+        }
+    }
+}
+
 
 
 
