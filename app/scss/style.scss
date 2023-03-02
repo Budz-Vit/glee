@@ -233,10 +233,114 @@
     }
 }
 
+.info{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fef7f0;
+    margin-bottom: 70px;
+    &__item{
+        padding: 44px 80px 44px 85px;
+        display: flex;
+        &-inform{
+            padding-left: 25px;
+        }
+        &-title{
+            font-size: 18px;
+            line-height: 40px;
+            color: #414141;
+            @extend %DMSans-Bold;
+        }
+        &-text{
+            @extend %DMSans-Regular;
+            line-height: 30px;
+            color: #585858;
+        }
+        &-img{
+            margin-top: 15px;
+        }
+    }
+    &__item + &__item{
+        border-left: 1px solid #e8e4df;
+    }
+}
 
+.products-top{
+    text-align: center;
+}
 
+.products__btn{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #8b8b8b;
+    @extend %DMSans-Bold;
+    &:hover{
+        color: $title;
+        cursor: pointer;
+        transition: all .8s;
+    }
+    &:focus{
+        color: $title;
+    }
+    & + & {
+        margin-left: 20px;
+    }
+}
 
+.products{
+    &-content{
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 380px);
+        grid-gap: 30px;
+    }
+    &__item{
+        text-align: center;
+        box-shadow: 3px 5.196px 47px 3px rgba(37, 37, 37, 0.08);
+        border-radius: 10px;
+        &-link{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 0 25px;
+            &-title{
+                @extend %DMSans-Medium;
+                color: $first;
+                font-size: 16px;
+                line-height: 40px;
+            }
+            &-price{
+                @extend %DMSans-Bold;
+                color: #a3bbc8;
+                line-height: 30px;
+            }
+        }
+        &-link-img{
+            margin: auto;
+        }
+    }
 
+    
+}
+
+.video-fashion{
+    margin-top: 50px;
+    &__inner{
+        background-image: url('../images/video-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 390px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
 @import 'media';
+
+
+   
