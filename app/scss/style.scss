@@ -71,7 +71,7 @@
 }
 
 .footer-top {
-  padding: 74px 0 76px;
+  padding-bottom: 76px;
   border-bottom: 1px solid #dae4e9;
   display: flex;
   &__contact {
@@ -197,6 +197,7 @@
   &__item {
     display: flex !important;
     justify-content: space-between;
+    transition: all 0.7s;
   }
   &__img {
     padding-right: 120px;
@@ -298,12 +299,49 @@
     text-align: center;
     box-shadow: 3px 5.196px 47px 3px rgba(37, 37, 37, 0.08);
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .products__item-link-box {
+        transform: translateY(0);
+      }
+    }
     &-link {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 10px 0 25px;
+      padding-bottom: 20px;
+
+      &-box {
+        position: absolute;
+        top: 190px;
+        display: flex;
+        left: 0;
+        right: 0;
+        width: 168px;
+        margin: 0 auto;
+        transform: translateY(500%);
+        transition: all 0.3s;
+        &-a {
+          width: 46px;
+          height: 46px;
+          background-color: #fff;
+          display: grid;
+          place-items: center;
+          border-radius: 50%;
+        }
+        &-a + &-a {
+          margin-left: 15px;
+        }
+        &-a:hover {
+          transition: all 0.4s;
+          background-color: #a3bbc8;
+          svg .a {
+            fill: #fff;
+          }
+        }
+      }
       &-title {
         @extend %DMSans-Medium;
         color: $first;
@@ -318,10 +356,43 @@
     }
     &-link-img {
       margin: auto;
+      max-height: 230px;
+      max-width: 220px;
+      // object-fit: cover;
     }
   }
-  &-add{
+  &-add {
     margin-bottom: 50px;
+  }
+  &-button {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(2, 247px);
+    grid-gap: 30px;
+    margin-top: 77px;
+    &__title {
+      font-size: 20px;
+      @extend %DMSans-Bold;
+      color: $title;
+    }
+    &__text {
+      font-size: 16px;
+      color: #a3bbc8;
+      @extend %DMSans-Bold;
+      margin-top: 12px;
+    }
+  }
+  &-new-button {
+    background-color: #f8f8f8;
+    position: relative;
+    padding: 44px 0 26px 40px;
+    overflow: hidden;
+  }
+  &-button__img {
+    mix-blend-mode: darken;
+    position: absolute;
+    left: 100px;
+    top: 45%;
   }
 }
 
@@ -338,7 +409,7 @@
     align-items: center;
     padding-left: 40px;
     height: 390px;
-    
+
     &__img {
       transform: translateY(-92px);
       margin-right: 25px;
@@ -378,7 +449,8 @@
 }
 
 .video-fashion {
-  margin-top: 50px;
+  margin-top: 120px;
+  margin-bottom: 115px;
   &__inner {
     background-image: url("../images/video-bg.jpg");
     background-repeat: no-repeat;
@@ -386,6 +458,94 @@
     height: 390px;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+}
+
+.promo {
+  position: relative;
+  margin-bottom: 150px;
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-view-all {
+    color: #262626;
+  }
+  &-view-all::after {
+    content: ">";
+    color: #262626;
+    margin-left: 18px;
+    height: 12px;
+    font-size: 16px;
+  }
+  &-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item {
+    width: 370px;
+    height: 421px;
+    background-color: #ffffff;
+    box-shadow: 3px 5.196px 47px 3px #25252505;
+    border-radius: 5px;
+    overflow: hidden;
+    &__info {
+      padding: 0 30px 30px 30px;
+    }
+    &__inform {
+      padding: 10px 30px;
+      background-color: #a3bbc8;
+      border-radius: 16px;
+      width: 104px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      @extend %Poppins-Bold;
+      line-height: 20px;
+      transform: translateY(-16px);
+    }
+    &__text {
+      font-size: 18px;
+      color: #262626;
+      @extend %DMSans-Medium;
+      border-bottom: 1px solid #e0e0e0;
+      height: 85px;
+      margin-bottom: 16px;
+    }
+    &__footer {
+      display: flex;
+      padding-left: 15px;
+      color: #222933;
+      @extend %Rubik-Regular;
+    }
+    &__img {
+      height: 250px;
+      width: 370px;
+      object-fit: cover;
+    }
+    &__date{
+      margin-right: 20px;
+    }
+  }
+  &-bg {
+    position: absolute;
+    background-color: #fef7f0;
+    height: 438px;
+    width: 100%;
+    transform: translateY(-371px);
+    z-index: -1;
+  }
+}
+
+.partners{
+  margin-top: 70px;
+  &__list{
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
   }
 }
